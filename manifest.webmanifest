@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "RLCC Method",
+  "short_name": "RLCC Method",
+  "description": "The RLCC Method: ten acrostics for discipleship and leadership, with an offline H.I.T. List, diagnostic and practice check.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6ef",
+  "theme_color": "#365233",
+  "lang": "en",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Pathway Explorer", "url": "./#pathway-explorer" },
+    { "name": "H.I.T. List", "url": "./#hit-list-panel" },
+    { "name": "Practice Check", "url": "./#recall-check" }
+  ]
+}
