@@ -847,8 +847,7 @@
       .svg-stage-box { padding: var(--space-md); min-height: 0; }
     }
     .brand-logo { height: 32px; width: auto; display: block; }
-    .menu-btn { display: none; }
-    @media (max-width: 720px) {
+    @media all {
       .app-brand { margin-right: auto; }
       .menu-btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; flex: none; width: 44px; height: 44px; border: 0; border-radius: var(--rounded); background: var(--surface-container); cursor: pointer; }
       .menu-btn span { display: block; width: 20px; height: 2px; border-radius: 2px; background: var(--on-surface); transition: transform var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out); }
@@ -858,6 +857,9 @@
       .app-bar .pillar-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex: none; flex-direction: column; align-items: stretch; overflow: visible; background: var(--background); border-bottom: var(--border-soft); box-shadow: var(--shadow-soft-hover); padding: var(--space-sm) max(var(--space-md), env(safe-area-inset-left)) var(--space-md); }
       .app-bar .pillar-nav.is-open { display: flex; }
       .app-bar .nav-pill { width: 100%; justify-content: flex-start; }
+    }
+    @media (min-width: 721px) {
+      .app-bar .pillar-nav { left: auto; right: max(var(--space-md), calc((100vw - 1160px) / 2 + var(--space-md))); width: 300px; top: calc(100% + 4px); border: var(--border-soft); border-radius: var(--rounded-lg); }
     }
   </style>
 </head>
@@ -2059,7 +2061,6 @@
       nav.addEventListener(`click`, (e) => { if (e.target.closest(`a`)) setOpen(false); });
       document.addEventListener(`keydown`, (e) => { if (e.key === `Escape`) setOpen(false); });
       document.addEventListener(`click`, (e) => { if (!e.target.closest(`.app-bar`)) setOpen(false); });
-      window.matchMedia(`(min-width: 721px)`).addEventListener(`change`, (e) => { if (e.matches) setOpen(false); });
     });
 
     function showToast(message, actionLabel, onAction) {
